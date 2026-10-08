@@ -1,0 +1,377 @@
+{
+  "signals": {
+    "persona": "an engineer who loves building things (robots, games, AI), recharges in the mountains and on the bike, and shoots everything with a 360° camera.",
+    "signals": [
+      {
+        "id": "S1",
+        "signal": "Developer (Java, AI, agentic automation), works at esgrovia",
+        "source": "LinkedIn profile",
+        "confidence": "high",
+        "usable": "yes",
+        "note": ""
+      },
+      {
+        "id": "S2",
+        "signal": "Built the game Groundbound with Claude over a weekend two days ago; studies Computer Games at FEL CTU",
+        "source": "LinkedIn post, public FB group post",
+        "confidence": "high",
+        "usable": "yes",
+        "note": ""
+      },
+      {
+        "id": "S3",
+        "signal": "Mountains: Dachstein, Krkonoše, rocky summits, 360° \"little planet\" photos",
+        "source": "Instagram (public)",
+        "confidence": "high",
+        "usable": "yes",
+        "note": ""
+      },
+      {
+        "id": "S4",
+        "signal": "Skiing (St. Anton 2026, France 2025)",
+        "source": "Instagram",
+        "confidence": "high",
+        "usable": "yes",
+        "note": "not very relevant in October"
+      },
+      {
+        "id": "S5",
+        "signal": "Bike touring with panniers (Denmark 2025)",
+        "source": "Instagram",
+        "confidence": "high",
+        "usable": "yes",
+        "note": ""
+      },
+      {
+        "id": "S6",
+        "signal": "Robotics: MRS Summer School 2026, ROS, Arduino",
+        "source": "Instagram, LinkedIn",
+        "confidence": "high",
+        "usable": "yes",
+        "note": ""
+      },
+      {
+        "id": "S7",
+        "signal": "Values: education, science and technology",
+        "source": "LinkedIn \"Causes\"",
+        "confidence": "high",
+        "usable": "yes",
+        "note": ""
+      },
+      {
+        "id": "S8",
+        "signal": "Has a German shepherd",
+        "source": "Instagram (public photos)",
+        "confidence": "high",
+        "usable": "conditional",
+        "note": "only if the dog travels (the business knows from the booking"
+      },
+      {
+        "id": "S9",
+        "signal": "Cipher games and city games, guitar and jams, drones/FPV",
+        "source": "Facebook events and groups",
+        "confidence": "medium",
+        "usable": "conditional",
+        "note": "visibility unverified, use only silently"
+      },
+      {
+        "id": "S10",
+        "signal": "Founder of Selevo (e-shop personalisation), exchange in Texas",
+        "source": "LinkedIn",
+        "confidence": "high",
+        "usable": "yes",
+        "note": "context only, not for a touch"
+      },
+      {
+        "id": "✗",
+        "signal": "Phone, e-mails, birthday, home town",
+        "source": "Facebook \"only me\"",
+        "confidence": "",
+        "usable": "no",
+        "note": "never"
+      },
+      {
+        "id": "✗",
+        "signal": "Partner, sibling (inferred from IG collaborations and comments)",
+        "source": "inferred",
+        "confidence": "",
+        "usable": "no",
+        "note": "never"
+      }
+    ]
+  },
+  "care": {
+    "businesses": [
+      {
+        "name": "🚆 Train Prague → Kraków",
+        "can_change": "seat choice, drink from the steward, printed/digital \"reading for the journey\", a note from the steward",
+        "limits": "no expensive gifts, timetable and carriage are fixed",
+        "touches": [
+          {
+            "id": "V1",
+            "touch": "Table seat with a socket in a quiet carriage, away from the doors",
+            "signals": [
+              "S1: 7 h on the train, he will probably work"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "",
+            "visibility": "silent"
+          },
+          {
+            "id": "V2",
+            "touch": "Steward offers coffee right after Ostrava, where most people's journey \"breaks\"",
+            "signals": [
+              "S1"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "coffee included",
+            "visibility": "silent"
+          },
+          {
+            "id": "V3",
+            "touch": "Cipher on the napkin: the coffee comes with a card holding a short cipher. The answer is a Kraków tip (\"Plac Nowy, zapiekanka after midnight\")",
+            "signals": [
+              "S9 cipher games, S2 gamer"
+            ],
+            "cost_eur": 0.1,
+            "cost_note": "",
+            "visibility": "subtle"
+          },
+          {
+            "id": "V4",
+            "touch": "Top of the digital \"reading for the journey\": an article on Kraków's game-dev scene (one of the hubs of Polish studios, e.g. Bloober Team)",
+            "signals": [
+              "S2"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "",
+            "visibility": "silent"
+          },
+          {
+            "id": "V5",
+            "touch": "Short note from the operator: \"In 7 hours you could build a game, they say. Good luck with Groundbound!\"",
+            "signals": [
+              "S2 (public post)"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "",
+            "visibility": "explicit"
+          }
+        ]
+      },
+      {
+        "name": "🏨 Hotel in Kazimierz",
+        "can_change": "room choice, welcome card, reception tips, breakfast time and form, partner bike rental",
+        "limits": "room standard stays, no rebuilding the room for a guest",
+        "touches": [
+          {
+            "id": "H1",
+            "touch": "Room with a proper desk and chair, higher floor, facing the courtyard",
+            "signals": [
+              "S1"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "",
+            "visibility": "silent"
+          },
+          {
+            "id": "H2",
+            "touch": "Handwritten welcome card with 3 tips, not a brochure: (1) Kościuszko Mound at sunrise, on clear mornings you can see the Tatras, (2) the cycle path along the Vistula to Tyniec Abbey, about 12 km and flat, (3) Plac Nowy in the evening",
+            "signals": [
+              "S3, S5"
+            ],
+            "cost_eur": 0.2,
+            "cost_note": "",
+            "visibility": "subtle"
+          },
+          {
+            "id": "H3",
+            "touch": "Reception offers a breakfast to go on Friday morning if the guest mentions the sunrise",
+            "signals": [
+              "S3"
+            ],
+            "cost_eur": 2.0,
+            "cost_note": "",
+            "visibility": "subtle"
+          },
+          {
+            "id": "H4",
+            "touch": "Discount at the partner bike rental, with a pannier and a phone mount available",
+            "signals": [
+              "S5 (Denmark with panniers)"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "commission",
+            "visibility": "silent"
+          },
+          {
+            "id": "H5",
+            "touch": "Note on the card: \"best panorama spot: the rooftop / Town Hall Tower\"",
+            "signals": [
+              "S3 (360° photos)"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "",
+            "visibility": "silent"
+          },
+          {
+            "id": "H6",
+            "touch": "If the booking includes a dog: room near the lift to the park, a bowl and a map of dog zones",
+            "signals": [
+              "S8 + booking data"
+            ],
+            "cost_eur": 1.0,
+            "cost_note": "",
+            "visibility": "subtle"
+          },
+          {
+            "id": "H7",
+            "touch": "Slip with the no-fly zones over the centre and the DroneRadar app, \"in case you brought a drone\"",
+            "signals": [
+              "S9 drones"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "",
+            "visibility": "silent"
+          }
+        ]
+      },
+      {
+        "name": "🗺️ Old Town tour",
+        "can_change": "emphasis and order of stops, the stories the guide tells, pace, closing tip",
+        "limits": "route and price stay, the group is shared",
+        "touches": [
+          {
+            "id": "T1",
+            "touch": "At the Wawel Dragon, tells the legend as Kraków's first hack: the cobbler's apprentice Skuba stuffed a sheep with sulphur. Then shows how the bronze dragon's gas burner works",
+            "signals": [
+              "S1, S6"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "",
+            "visibility": "silent"
+          },
+          {
+            "id": "T2",
+            "touch": "More time at the astronomical instruments in Collegium Maius and Copernicus, who studied there",
+            "signals": [
+              "S7 science"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "",
+            "visibility": "silent"
+          },
+          {
+            "id": "T3",
+            "touch": "On the Rynek: \"Stand in the middle, this is where the best 360° shot is, I'll hold the camera\"",
+            "signals": [
+              "S3"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "",
+            "visibility": "subtle"
+          },
+          {
+            "id": "T4",
+            "touch": "Instead of a generic \"enjoy the city\", one tip: Nowa Huta as a socialist urban-planning experiment (for an engineer and a Cities: Skylines player)",
+            "signals": [
+              "S1, FB interests"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "",
+            "visibility": "silent"
+          },
+          {
+            "id": "T5",
+            "touch": "View south from Wawel: \"On clear days you can see the Tatras on the horizon from here\"",
+            "signals": [
+              "S3"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "",
+            "visibility": "silent"
+          }
+        ]
+      },
+      {
+        "name": "🍽️ Lunch at the restaurant",
+        "can_change": "table, dish recommendation, a small tasting on the house, a tip for the evening",
+        "limits": "menu is fixed, care budget about €2–3",
+        "touches": [
+          {
+            "id": "R1",
+            "touch": "Window table with a view, not by the kitchen",
+            "signals": [
+              "general"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "",
+            "visibility": "silent"
+          },
+          {
+            "id": "R2",
+            "touch": "The waiter recommends a highlander dish and brings a free taste of oscypek with cranberries with the coffee: \"Smoked sheep cheese from the Tatras, in case you ever head there\"",
+            "signals": [
+              "S3 mountains"
+            ],
+            "cost_eur": 2.0,
+            "cost_note": "",
+            "visibility": "subtle"
+          },
+          {
+            "id": "R3",
+            "touch": "With the bill, a card with an evening tip: open mic / jam in Kazimierz",
+            "signals": [
+              "S9 music"
+            ],
+            "cost_eur": 0.1,
+            "cost_note": "",
+            "visibility": "silent"
+          },
+          {
+            "id": "R4",
+            "touch": "If he comes with the dog: a terrace seat and a bowl of water without asking",
+            "signals": [
+              "S8"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "",
+            "visibility": "subtle"
+          },
+          {
+            "id": "R5",
+            "touch": "Thank-you on the receipt: \"Enjoy your meal, and good luck with the next build\"",
+            "signals": [
+              "S1"
+            ],
+            "cost_eur": 0.0,
+            "cost_note": "",
+            "visibility": "explicit"
+          }
+        ]
+      }
+    ],
+    "rejected": [
+      {
+        "idea": "\"Welcome, Jarda, a room for two like last time with [partner]?\"",
+        "reason": "a private relationship inferred from other people's accounts."
+      },
+      {
+        "idea": "A birthday cake",
+        "reason": "the birthday is an \"only me\" field, and probably wrong anyway."
+      },
+      {
+        "idea": "German shepherd bedsheets, his favourite band playing in the room",
+        "reason": "too intimate and too showy. Caring, not creepy."
+      },
+      {
+        "idea": "\"Congratulations on 2nd place in Můj první milion\"",
+        "reason": "public, but unrelated to the trip and feels like surveillance."
+      },
+      {
+        "idea": "Anything that requires mentioning his home town, school or employer without a reason.",
+        "reason": ""
+      }
+    ]
+  }
+}

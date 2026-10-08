@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEENDO Live Demo</title>
+<meta name="description" content="SEENDO: small gestures, real recognition. Interactive demo replaying recorded agent runs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{--paper:#F6F1EA;--card:#FFFDF9;--ink:#1C1B22;--muted:#6E6A63;--coral:#FF6B4A;--sage:#7FA88F;--amber:#E0A93B;--red:#D93A3A;--grey:#B9B4AC;--line:#E4DCD0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 Inter,system-ui,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:24px 16px 64px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;margin:0}
+h2{font-size:24px;margin:36px 0 12px}
+a{color:var(--ink)}
+.logo{font-family:Fraunces,serif;font-size:44px;letter-spacing:-1px;display:inline-block;position:relative;line-height:1}
+.logo b{font-weight:700}
+.logo svg{display:block;margin:2px auto 0}
+.tag{font-family:Fraunces,serif;font-size:20px;color:var(--muted);margin:6px 0 0}
+header{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-end}
+.mock{background:#fff3cd;border:1px solid #f0d58a;border-radius:10px;padding:10px 14px;font-size:13px;margin:18px 0 0}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:22px 0 0}
+.step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:13px;color:var(--muted);transition:.3s}
+.step strong{display:block;color:var(--ink);font-size:14px}
+.step.on{border-color:var(--coral);box-shadow:0 0 0 3px #ff6b4a22}
+.step.done{border-color:var(--sage)}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.case{all:unset;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.case:focus-visible{outline:2px solid var(--coral)}
+.case.sel{border-color:var(--ink);box-shadow:0 2px 0 var(--ink)}
+.case b{font-family:Fraunces,serif;font-size:17px;display:block}
+.case span{font-size:12px;color:var(--muted)}
+.inputs{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+summary{cursor:pointer;font-weight:600}
+pre{white-space:pre-wrap;font:12.5px/1.45 ui-monospace,Consolas,monospace;max-height:320px;overflow:auto;margin:8px 0 0}
+.run{margin:16px 0 0;background:var(--coral);color:#fff;border:0;border-radius:999px;padding:12px 26px;font:600 16px Inter,sans-serif;cursor:pointer}
+.run:disabled{opacity:.5;cursor:default}
+.log{font:12.5px/1.6 ui-monospace,Consolas,monospace;background:var(--ink);color:#e9e4da;border-radius:12px;padding:12px 14px;margin-top:14px;min-height:20px}
+.log:empty{display:none}
+.log .ok{color:#9fd3b1}.log .x{color:#ff9a8a}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;animation:in .45s cubic-bezier(.2,1.4,.4,1) both}
+@keyframes in{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.sig .v{font-size:12px;font-weight:600;border-radius:999px;padding:2px 8px;display:inline-block;margin-bottom:6px}
+.sig.yes .v{background:#7fa88f33;color:#3e6b50}
+.sig.conditional .v{background:#e0a93b33;color:#8a6212}
+.sig.no{background:#f1ede6;color:var(--muted)}
+.sig.no .t{text-decoration:line-through}
+.sig.no .v{background:#d93a3a22;color:var(--red)}
+.pill{display:inline-block;font-size:11.5px;background:#7fa88f26;color:#3e6b50;border-radius:999px;padding:2px 8px;margin-top:6px}
+.small{font-size:12px;color:var(--muted);margin-top:4px}
+.persona{font-family:Caveat,cursive;font-size:26px;line-height:1.25;background:var(--card);border-left:4px solid var(--coral);padding:10px 16px;border-radius:8px;margin-top:12px}
+.biz{margin-top:18px}
+.biz h3{font-size:19px}
+.biz .caps{font-size:12.5px;color:var(--muted);margin:2px 0 8px}
+.touch{display:flex;flex-direction:column;gap:6px}
+.touch .row{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+.vis{font-size:11.5px;font-weight:600;border-radius:999px;padding:2px 8px}
+.vis.silent{background:#7fa88f33;color:#3e6b50}.vis.subtle{background:#e0a93b33;color:#8a6212}.vis.explicit{background:#4a7bff22;color:#2949a8}
+.cost{font-weight:600}
+.approve{all:unset;cursor:pointer;font-size:12.5px;font-weight:600;border:1px solid var(--ink);border-radius:999px;padding:3px 10px}
+.approve:focus-visible{outline:2px solid var(--coral)}
+.touch.ok{border-color:var(--coral);background:#fff6f2}
+.touch.ok .approve{background:var(--coral);border-color:var(--coral);color:#fff}
+.rej{position:relative;overflow:hidden;background:#fbf2f0;border-color:#efc9c2}
+.rej .stamp{position:absolute;right:-6px;top:8px;transform:rotate(12deg);border:2px solid var(--red);color:var(--red);font:700 11px Inter,sans-serif;letter-spacing:1px;padding:2px 6px;border-radius:4px;opacity:.8}
+.rej b{display:block;padding-right:70px}
+.sum{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;margin-top:10px}
+.sum div b{font-family:Fraunces,serif;font-size:26px;display:block}
+footer{margin-top:48px;font-size:13px;color:var(--muted)}
+@media (max-width:760px){.steps{grid-template-columns:1fr 1fr}.cases,.inputs{grid-template-columns:1fr}.logo{font-size:36px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div>
+    <div class="logo">SEEN<b>DO</b><svg width="110" height="14" viewBox="0 0 110 14" aria-hidden="true"><path d="M4 3 Q55 18 106 3" stroke="#FF6B4A" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></div>
+    <p class="tag">Small gestures, real recognition.</p>
+  </div>
+  <a href="https://github.com/knapejar/seendo">Code & README on GitHub ↗</a>
+</header>
+
+<p class="mock"><b>Mock demo.</b> This page replays recorded runs of the SEENDO agent step by step. It makes no live LLM calls, so it works instantly for everyone. The real pipeline is <a href="https://github.com/knapejar/seendo/blob/main/seendo.py">seendo.py</a> (Claude Code CLI). The data shown here is its actual output from <code>examples/</code>.</p>
+
+<div class="steps" id="steps">
+  <div class="step" data-s="1"><strong>👤 Social Signals</strong>public interests, passions, habits</div>
+  <div class="step" data-s="2"><strong>🤲 Care Capabilities</strong>what each business can change</div>
+  <div class="step" data-s="3"><strong>🧠 Care Intelligence</strong>tiny, feasible, non-intrusive</div>
+  <div class="step" data-s="4"><strong>💛 Human Gesture</strong>approved & delivered by people</div>
+</div>
+
+<h2>1 · Pick a person and a journey</h2>
+<div class="cases" id="cases"></div>
+<div class="inputs">
+  <details><summary>Input: public profile notes</summary><pre id="profile"></pre></details>
+  <details><summary>Input: journey & care capabilities</summary><pre id="journey"></pre></details>
+</div>
+<button class="run" id="run">▶ Run SEENDO</button>
+<div class="log" id="log" aria-live="polite"></div>
+
+<div id="out"></div>
+
+<footer>Agents 0.0.7 · From Dusk Till Dawn Hackathon #01 · topic Social Media Deep Research · team Claude Masters</footer>
+</div>
+
+<script src="data.js"></script>
+<script>
+const CASES = window.SEENDO_CASES, $ = s => document.querySelector(s);
+const VIS = {silent: "🟢 silent", subtle: "🟡 subtle", explicit: "🔵 explicit (opt-in)"};
+const USE = {yes: "✅ usable", conditional: "⚠️ conditional", no: "🔒 never used"};
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+let cur = CASES[0], runId = 0;
+
+function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+function step(n) { document.querySelectorAll(".step").forEach(s => { const k = +s.dataset.s; s.classList.toggle("on", k === n); s.classList.toggle("done", k < n || n === 5); }); }
+function log(text, cls) { const l = el("div", cls, text); $("#log").append(l); }
+
+function pick(c) {
+  cur = c; runId++;
+  document.querySelectorAll(".case").forEach(b => b.classList.toggle("sel", b.dataset.id === c.id));
+  $("#profile").textContent = c.profile; $("#journey").textContent = c.journey;
+  $("#out").replaceChildren(); $("#log").replaceChildren(); step(0); $("#run").disabled = false;
+}
+
+CASES.forEach(c => {
+  const b = el("button", "case"); b.dataset.id = c.id;
+  b.append(el("b", null, c.title), el("span", null, c.note));
+  b.onclick = () => pick(c); $("#cases").append(b);
+});
+
+async function run() {
+  const id = ++runId, c = cur, out = $("#out"), live = () => id === runId;
+  out.replaceChildren(); $("#log").replaceChildren(); $("#run").disabled = true;
+  const sigs = c.signals.signals, used = sigs.filter(s => s.usable !== "no");
+
+  step(1); log("› reading public profile notes …"); await sleep(600); if (!live()) return;
+  log(`✓ ${sigs.length} signals found, ${used.length} usable, ${sigs.length - used.length} discarded (private or inferred)`, "ok");
+  out.append(el("h2", null, "2 · Social Signals (public only)"));
+  const g = el("div", "grid"); out.append(g);
+  for (const s of sigs) {
+    if (!live()) return;
+    const d = el("div", "card sig " + s.usable);
+    d.append(el("span", "v", USE[s.usable]), el("div", "t", s.signal), el("span", "pill", "● " + s.source));
+    if (s.note) d.append(el("div", "small", s.note));
+    g.append(d); await sleep(120);
+  }
+  out.append(el("div", "persona", "“" + c.signals.persona + "”"));
+
+  await sleep(500); if (!live()) return;
+  step(2); log("› loading care capabilities of " + c.care.businesses.length + " businesses …");
+  await sleep(500); step(3); log("› Care Intelligence: matching signals × capabilities …");
+  await sleep(700); if (!live()) return;
+  const touches = c.care.businesses.flatMap(b => b.touches);
+  const cost = touches.reduce((a, t) => a + t.cost_eur, 0);
+  log(`✓ ${touches.length} gestures proposed, total cost €${cost.toFixed(2)}`, "ok");
+
+  out.append(el("h2", null, "3 · Care Intelligence → proposed gestures"));
+  for (const b of c.care.businesses) {
+    const sec = el("div", "biz"); sec.append(el("h3", null, b.name), el("div", "caps", "Can change: " + b.can_change + " · Limits: " + b.limits));
+    const bg = el("div", "grid"); sec.append(bg); out.append(sec);
+    for (const t of b.touches) {
+      if (!live()) return;
+      const d = el("div", "card touch"), top = el("div", "row"), bot = el("div", "row");
+      top.append(el("span", "vis " + t.visibility, VIS[t.visibility] || t.visibility), el("span", "cost", "€" + (t.cost_eur % 1 ? t.cost_eur.toFixed(2) : t.cost_eur) + (t.cost_note ? " · " + t.cost_note : "")));
+      const ap = el("button", "approve", "Approve"); ap.onclick = () => { const on = d.classList.toggle("ok"); ap.textContent = on ? "Approved ✓" : "Approve"; if (on) step(5); };
+      bot.append(el("span", "pill", "why: " + t.signals.join(", ")), ap);
+      d.append(top, el("div", null, t.touch), bot); bg.append(d); await sleep(110);
+    }
+  }
+
+  await sleep(400); if (!live()) return;
+  log(`› guardrail: "How do you know that?" test …`); await sleep(600);
+  log(`✗ ${c.care.rejected.length} ideas rejected: private, inferred, creepy or showy`, "x");
+  out.append(el("h2", null, "4 · Rejected by the guardrail"));
+  const rg = el("div", "grid"); out.append(rg);
+  for (const r of c.care.rejected) {
+    if (!live()) return;
+    const d = el("div", "card rej"); d.append(el("span", "stamp", "REJECTED"), el("b", null, r.idea));
+    if (r.reason) d.append(el("div", "small", r.reason));
+    rg.append(d); await sleep(140);
+  }
+
+  step(4);
+  out.append(el("h2", null, "5 · Human Gesture"));
+  const s = el("div", "sum");
+  [[touches.length, "gestures proposed"], ["€" + cost.toFixed(2), "total cost for the whole journey"], [touches.filter(t => t.visibility === "silent").length, "silent (guest won't notice targeting)"], [c.care.rejected.length, "creepy ideas blocked"]]
+    .forEach(([n, l]) => { const d = el("div"); d.append(el("b", null, String(n)), document.createTextNode(l)); s.append(d); });
+  out.append(s, el("p", "small", "Nothing reaches the guest automatically. Staff approve each gesture above (click Approve) and deliver it themselves. The business sees why; the guest only sees care."));
+  log("✓ report ready, waiting for human approval", "ok");
+  $("#run").disabled = false;
+}
+$("#run").onclick = run;
+pick(CASES[0]);
+</script>
+</body>
+</html>

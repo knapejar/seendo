@@ -70,6 +70,8 @@ pre{white-space:pre-wrap;font:12.5px/1.45 ui-monospace,Consolas,monospace;max-he
 .rej b{display:block;padding-right:70px}
 .sum{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;margin-top:10px}
 .sum div b{font-family:Fraunces,serif;font-size:26px;display:block}
+.video{position:relative;aspect-ratio:16/9;margin:18px 0 0;border-radius:12px;overflow:hidden;background:#000}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 footer{margin-top:48px;font-size:13px;color:var(--muted)}
 @media (max-width:760px){.steps{grid-template-columns:1fr 1fr}.cases,.inputs{grid-template-columns:1fr}.logo{font-size:36px}}
 </style>
@@ -85,6 +87,8 @@ footer{margin-top:48px;font-size:13px;color:var(--muted)}
 </header>
 
 <p class="mock"><b>Mock demo.</b> This page replays recorded runs of the SEENDO agent step by step. It makes no live LLM calls, so it works instantly for everyone. The real pipeline is <a href="https://github.com/knapejar/seendo/blob/main/seendo.py">seendo.py</a> (Claude Code CLI). The data shown here is its actual output from <code>examples/</code>.</p>
+
+<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/_OBFE8PEDPI" title="SEENDO demo video" allow="encrypted-media; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
 
 <div class="steps" id="steps">
   <div class="step" data-s="1"><strong>👤 Social Signals</strong>public interests, passions, habits</div>

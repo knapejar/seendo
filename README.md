@@ -7,6 +7,10 @@ SEENDO is an agent that reads only what a customer has made **public**, matches 
 
 > *"They saw me as a person, not just a customer."*
 
+[![SEENDO demo video](https://img.youtube.com/vi/_OBFE8PEDPI/maxresdefault.jpg)](https://youtu.be/_OBFE8PEDPI)
+
+**▶ Demo video (60 s): https://youtu.be/_OBFE8PEDPI**
+
 **▶ Live demo: https://knapejar.github.io/seendo/** (mock: replays the recorded runs of all three examples step by step, no LLM calls, works instantly)
 
 Agents 0.0.7 · From Dusk Till Dawn Hackathon #01 · topic **Social Media Deep Research** (research goal: hospitality; a person and a journey go in, a report with traceable sources comes out).

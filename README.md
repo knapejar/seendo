@@ -7,6 +7,8 @@ SEENDO is an agent that reads only what a customer has made **public**, matches 
 
 > *"They saw me as a person, not just a customer."*
 
+**▶ Live demo: https://knapejar.github.io/seendo/** (mock: replays the recorded runs of all three examples step by step, no LLM calls, works instantly)
+
 Agents 0.0.7 · From Dusk Till Dawn Hackathon #01 · topic **Social Media Deep Research** (research goal: hospitality; a person and a journey go in, a report with traceable sources comes out).
 
 ## The process
@@ -79,7 +81,7 @@ All logic is in [`seendo.py`](seendo.py) (~120 lines): two Claude calls (Social 
 | | |
 |---|---|
 | ✅ **Real** | The pipeline in `seendo.py` runs end to end on Claude Code. Examples 2 and 3 are its unedited output. Example 1 was produced with Claude Code following the same steps and prompts during the night; the video is built on it. Example 1's profile is real public data of a team member, collected with his consent, with contacts removed. |
-| 🟡 **Simulated** | Profile collection: public profiles were read and summarised into `profile.md` by hand / with a browser agent, not by a scraper in this repo. Business capabilities are written by hand. Personas in examples 2 and 3 are fictional. |
+| 🟡 **Simulated** | The live demo page is a mock: it replays recorded outputs from `examples/` and makes no LLM calls. Profile collection: public profiles were read and summarised into `profile.md` by hand / with a browser agent, not by a scraper in this repo. Business capabilities are written by hand. Personas in examples 2 and 3 are fictional. |
 | ❌ **Missing** | Automated scraping (e.g. Apify actors for Instagram/LinkedIn) · a business-side approval UI · the guest opt-in flow for explicit touches · delivery integrations (POS, hotel PMS) · evaluation on more than three cases. |
 
 The guardrail is an LLM judgement, not a guarantee: a human at the business approves every gesture before it reaches the guest. That is a deliberate part of the design.

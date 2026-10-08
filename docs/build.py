@@ -7,6 +7,8 @@ TITLES = {
     "01-krakow": ("Jarda → Kraków", "Real person (team member), own public profiles. The case from the video."),
     "02-lisbon": ("Marta → Lisbon", "Fictional persona. Raw output of seendo.py."),
     "03-errands": ("Tomáš · Saturday errands in Brno", "Fictional persona. Raw output of seendo.py. No travel at all."),
+    "04-vienna-move": ("Ama · moving into a Vienna flat", "Fictional persona. Raw output of seendo.py. Movers, fibre technician, locksmith, market stall."),
+    "05-budapest-wednesday": ("Margit, 72 · a Wednesday in Budapest", "Fictional persona. Raw output of seendo.py. Library, pharmacy, new hairdresser, thermal bath."),
 }
 cases = []
 for d in sorted((root / "examples").iterdir()):

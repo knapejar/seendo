@@ -26,7 +26,7 @@ header{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-
 .step strong{display:block;color:var(--ink);font-size:14px}
 .step.on{border-color:var(--coral);box-shadow:0 0 0 3px #ff6b4a22}
 .step.done{border-color:var(--sage)}
-.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
 .case{all:unset;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
 .case:focus-visible{outline:2px solid var(--coral)}
 .case.sel{border-color:var(--ink);box-shadow:0 2px 0 var(--ink)}

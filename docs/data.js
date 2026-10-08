@@ -929,5 +929,649 @@ window.SEENDO_CASES = [
     }
    ]
   }
+ },
+ {
+  "id": "04-vienna-move",
+  "title": "Ama · moving into a Vienna flat",
+  "note": "Fictional persona. Raw output of seendo.py. Movers, fibre technician, locksmith, market stall.",
+  "profile": "# Public profile notes: Ama (fictional persona for the demo)\n\nAma Owusu, 34. Collected from public profiles, end of Oct 2026.\n\n## LinkedIn (public)\n- Structural engineer specialising in timber buildings (CLT, cross-laminated timber). Born in Kumasi, Ghana; MSc TU Delft; five years at an engineering firm in Rotterdam.\n- Post (Sep 2026): \"New chapter: from Monday 2 November I'm joining a Vienna team working on mid-rise timber housing. First weeks in a serviced apartment, then my own place!\" 212 reactions.\n- Post (Oct 2026): photo of her Austrian Rot-Weiß-Rot Card with the caption \"Finally holding it, after 7 months of paperwork.\"\n\n## Instagram @ama.grows (public, 1.2k followers)\n- Houseplants everywhere: 40+ plants, water-propagation stations, grow lights on the shelves. Monstera, philodendrons, a fiddle-leaf fig she calls \"Kofi\".\n- Calls her big Monstera deliciosa \"my firstborn 👶🌿\" in captions.\n- Reel (Oct 2026): \"43 plants, 1,100 km, one rented car. The movers won't insure them, so I'm driving them myself. Pray for us.\" Shows plants being wrapped in newspaper.\n- Rides a heavy black Dutch \"omafiets\" everywhere; it is coming to Vienna \"in the truck, not negotiable\".\n- Cooks Ghanaian food on Sundays: jollof, light soup, kontomire stew. Caption: \"No idea where I'll find kontomire leaves in Vienna.\"\n\n## YouTube (public, a channel that isn't hers)\n- Livestreams of a Ghanaian Methodist congregation in Rotterdam; the descriptions name her as a soprano in the choir and soloist at the Christmas services.\n\n## Reddit (u/plantsandbeams)\n- Posts in r/wien: \"Where do you buy grow lights in Vienna?\" and \"Is Ottakring OK for a woman living alone?\"\n- The account never mentions her name; the same plant shelf appears in her Instagram photos.\n\n## Facebook\n- A 2023 post about her Rotterdam flat being burgled (\"I don't feel safe at home anymore\"). Deleted from her profile in 2024; a copy is still on the Wayback Machine.\n",
+  "journey": "# Journey: moving into a new flat in Vienna, Fri 6 Nov 2026\n\nAma has been living in a serviced apartment since starting her job on Mon 2 Nov. Today she takes a day off to move into her own Altbau flat on the 4th floor (no lift) in Ottakring, Vienna's 16th district. The movers' truck from Rotterdam arrives at 8:00; it is about 6 °C outside. She drives the 43 plants herself in a rented car and arrives around 15:00, after the truck is unloaded. The internet is installed and the lock changed the same day, and she shops round the corner at the Brunnenmarkt.\n\nThe property manager has already turned the heating on in the empty flat for the new tenant.\n\nHouse rules of the building: no bikes in the stairwell or hallways; there is a bike room in the courtyard, opened with the building key.\n\n## Moving crew (Vienna partner of the international mover, unloading and carrying up)\n- Can change: unloading and carrying order, where furniture stands (e.g. keeping walls by the windows free), where boxes go by room label, which boxes are opened first, leaving spare boxes and tape, the company's own printed first-week checklist for anyone moving to Vienna (address registration, waste sorting, shop opening hours), which the crew lead can tick or annotate.\n- Limits: hourly rate fixed; plants excluded by contract and insurance; no furniture assembly beyond the quote; the bike can't be left in the stairwell; care budget ~€5.\n\n## Internet technician (fibre installation)\n- Can change: calling ahead within the 8–12 window, where the router goes (within reach of the socket), cable routing, a signal check in each room with a phone, advice on extenders, how the Wi-Fi and router settings are explained.\n- Limits: one-hour slot; explains the Wi-Fi and router the same way for every customer, no device-specific suggestions (smart plugs, timers, extenders for particular uses) unless the customer asks; tariff fixed; no free hardware or speed upgrades; care budget ~€2.\n\n## Locksmith (replaces the cylinder of the flat door)\n- Can change: timing, coloured key caps or tags, handing the keys to the crew lead or to the tenant, how the keys and key card are handed over, a short explanation of the lock and the building's key system, one practical tip.\n- Limits: security-certificate keys are copied only with the key card; the building key (main door, courtyard, bike room) belongs to the house's central locking system and can't be copied without the property manager's approval; no upselling; care budget ~€3.\n\n## Greengrocer stall at the Brunnenmarkt\n- Can change: advice on substitutes and how to cook them, pointing to nearby specialist shops, setting something aside or ordering it for the next market day, packing.\n- Limits: what's on the stall that day; market closed on Sundays; care budget ~€1.\n",
+  "signals": {
+   "persona": "Ama is a 34-year-old timber structural engineer relocating from Rotterdam to Vienna in early November 2026 to work on mid-rise timber housing, a dedicated houseplant grower who is personally driving her 43 plants across Europe, and an everyday cyclist on a heavy Dutch omafiets.",
+   "signals": [
+    {
+     "id": "S1",
+     "signal": "Professional passion for timber construction (CLT, mid-rise timber housing)",
+     "source": "LinkedIn profile (public)",
+     "confidence": "high",
+     "usable": "yes",
+     "note": "She posted this herself on her public professional profile and it is clearly about her. Referring to it does not reveal anything personal."
+    },
+    {
+     "id": "S2",
+     "signal": "Moving to Vienna and starting a new job on Monday 2 November 2026; staying in a serviced apartment first, then moving into her own place",
+     "source": "LinkedIn post, Sep 2026 (public, 212 reactions)",
+     "confidence": "high",
+     "usable": "conditional",
+     "note": "Only the general fact that she is new in Vienna is usable, through touches any newcomer could plausibly receive. Do not use the exact start date or the housing timeline to time a touch: she would ask 'How do you know that?', and it reveals her living situation."
+    },
+    {
+     "id": "S3",
+     "signal": "Holds an Austrian Rot-Weiß-Rot Card after 7 months of paperwork",
+     "source": "LinkedIn post, Oct 2026 (public)",
+     "confidence": "high",
+     "usable": "no",
+     "note": "It is public, but it reveals immigration and residence status, which is sensitive and could feel discriminatory or invasive if acted on. S2 already covers that she is a newcomer."
+    },
+    {
+     "id": "S4",
+     "signal": "Serious houseplant enthusiast: 40+ plants, water-propagation stations, grow lights; Monstera, philodendrons, a fiddle-leaf fig named 'Kofi'",
+     "source": "Instagram @ama.grows (public, 1.2k followers)",
+     "confidence": "high",
+     "usable": "yes",
+     "note": "This is her own public account, the plants are its central theme, and the interest is clearly meant seriously. It works well with silent touches because almost anyone might like a plant-related gesture, so a wrong guess costs nothing. Do not refer to the plant names in a touch."
+    },
+    {
+     "id": "S5",
+     "signal": "Calls her Monstera deliciosa 'my firstborn'",
+     "source": "Instagram captions (public)",
+     "confidence": "high",
+     "usable": "conditional",
+     "note": "This is a joke and must not be read as a fact about children. It only confirms how much she cares about her plants (see S4). Never use the wording."
+    },
+    {
+     "id": "S6",
+     "signal": "Personally driving her 43 plants 1,100 km in a rented car because movers won't insure them",
+     "source": "Instagram reel, Oct 2026 (public)",
+     "confidence": "high",
+     "usable": "conditional",
+     "note": "It strengthens S4 and suggests the plants will need recovery after the move. Use it only through silent, generic plant-friendly attention. Referring to the drive itself reveals that someone watched the reel, so that would need opt-in."
+    },
+    {
+     "id": "S7",
+     "signal": "Rides a heavy black Dutch omafiets everywhere; bringing it to Vienna",
+     "source": "Instagram (public)",
+     "confidence": "high",
+     "usable": "yes",
+     "note": "She shared this habit publicly herself. Bike-friendly attention is generic enough to stay silent, and a wrong guess does no harm."
+    },
+    {
+     "id": "S8",
+     "signal": "Cooks on Sundays and is unsure where to find specific ingredients (kontomire leaves) in Vienna",
+     "source": "Instagram caption (public)",
+     "confidence": "medium",
+     "usable": "conditional",
+     "note": "Usable only as a general interest in home cooking. Do not single her out for gestures based on ethnicity or national origin, and do not refer to the specific dishes or ingredients without opt-in. A touch aimed at her origin would feel profiled and would fail the 'How do you know that?' test."
+    },
+    {
+     "id": "S9",
+     "signal": "Born in Kumasi, Ghana; MSc from TU Delft; five years at a Rotterdam engineering firm",
+     "source": "LinkedIn profile (public)",
+     "confidence": "high",
+     "usable": "no",
+     "note": "Place of birth points to ethnic or national origin, a sensitive category, and must not drive any targeting. The education and career history add nothing beyond S1."
+    },
+    {
+     "id": "S10",
+     "signal": "Sings soprano in a church choir and was a soloist at Christmas services",
+     "source": "YouTube livestreams on a congregation's channel (not her account)",
+     "confidence": "medium",
+     "usable": "no",
+     "note": "This is someone else's data about her, not something she published herself, and it reveals her religious affiliation, a sensitive category. Discarded."
+    },
+    {
+     "id": "S11",
+     "signal": "Looking for grow lights in Vienna",
+     "source": "Reddit u/plantsandbeams (r/wien)",
+     "confidence": "low",
+     "usable": "no",
+     "note": "The account is pseudonymous and never names her. Linking it to her by matching a photo of a plant shelf is de-anonymization, and the link may be wrong. Discarded; S4 already covers the plant interest."
+    },
+    {
+     "id": "S12",
+     "signal": "Concerned about the safety of the Ottakring district for a woman living alone",
+     "source": "Reddit u/plantsandbeams (r/wien)",
+     "confidence": "low",
+     "usable": "no",
+     "note": "It comes from a pseudonymous account linked to her only by inference, and it touches on personal safety, gender and where she will live. Acting on it would feel like surveillance. Discarded."
+    },
+    {
+     "id": "S13",
+     "signal": "Rotterdam flat was burgled in 2023; she felt unsafe at home",
+     "source": "Facebook post, deleted by her in 2024; copy on the Wayback Machine",
+     "confidence": "high",
+     "usable": "no",
+     "note": "She deliberately removed this, so it is no longer something she makes public. It is also a traumatic, safety-related event. Never use it."
+    }
+   ]
+  },
+  "care": {
+   "businesses": [
+    {
+     "name": "Moving crew (Vienna partner of the international mover)",
+     "can_change": "Carrying order, where furniture stands, which room each box goes to, which boxes are opened first, leaving spare boxes and tape, and notes on the company's printed first-week checklist for newcomers to Vienna.",
+     "limits": "Hourly rate is fixed. Plants are excluded by contract and insurance. No furniture assembly beyond the quote. The bike can't be left in the stairwell. Care budget about €5.",
+     "touches": [
+      {
+       "id": "M1",
+       "touch": "Place the large furniture against inner walls and keep the walls and floor next to the windows clear. Leave an empty, bright corner in the living room. It reads as a normal 'leave space for you to arrange' choice, and if she has no plants she gets a tidy, open room.",
+       "signals": [
+        "S4",
+        "S6"
+       ],
+       "cost_eur": 0,
+       "visibility": "silent"
+      },
+      {
+       "id": "M2",
+       "touch": "The property manager has already put the heating on, so keep the flat warm: close the windows, and close the flat door between loads so it is not propped open for hours at 6 °C. Anything delicate she brings later then arrives in a warm room.",
+       "signals": [
+        "S6"
+       ],
+       "cost_eur": 0,
+       "visibility": "silent"
+      },
+      {
+       "id": "M3",
+       "touch": "Put the boxes labelled kitchen and bedroom in their rooms and open them first. Stack the rest along the walls by room label so the floors stay walkable. Leave 5 flat spare boxes and a roll of tape.",
+       "signals": [
+        "S2"
+       ],
+       "cost_eur": 4,
+       "visibility": "subtle"
+      },
+      {
+       "id": "M4",
+       "touch": "On the standard first-week checklist, the crew lead ticks or adds the items that apply to this building: the bike room is in the courtyard and opens with the building key (no bikes in the stairwell); the nearby Brunnenmarkt is closed on Sundays; where the waste-sorting bins are in this courtyard.",
+       "signals": [
+        "S2",
+        "S7",
+        "S8"
+       ],
+       "cost_eur": 0,
+       "visibility": "subtle"
+      }
+     ]
+    },
+    {
+     "name": "Internet technician (fibre installation)",
+     "can_change": "Calling ahead within the 8–12 window, where the router goes (within reach of the socket), cable routing, a signal check in each room, advice on extenders, and how the Wi-Fi and router settings are explained.",
+     "limits": "One-hour slot. Explains the setup the same way for every customer, with no device-specific suggestions unless asked. Tariff fixed. No free hardware or speed upgrades. Care budget about €2.",
+     "touches": [
+      {
+       "id": "I1",
+       "touch": "Call ahead within the window and agree that the crew lead can let you in if the tenant isn't there yet. Same courtesy for every customer.",
+       "signals": [
+        "S2"
+       ],
+       "cost_eur": 0,
+       "visibility": "subtle"
+      },
+      {
+       "id": "I2",
+       "touch": "Run the cable along the skirting boards and put the router at the socket, not on a windowsill or in the middle of free floor. This is standard good practice and also keeps the bright spots and open space free.",
+       "signals": [
+        "S4"
+       ],
+       "cost_eur": 0,
+       "visibility": "silent"
+      },
+      {
+       "id": "I3",
+       "touch": "Check the signal in every room with a phone and write the results, the Wi-Fi name and the password on a card. Leave the card in an envelope by the router, because the tenant may arrive after the installation.",
+       "signals": [
+        "S2"
+       ],
+       "cost_eur": 1,
+       "visibility": "subtle"
+      }
+     ]
+    },
+    {
+     "name": "Locksmith (replaces the cylinder of the flat door)",
+     "can_change": "Timing, coloured key caps or tags, who gets the keys (crew lead or tenant), how the keys and key card are handed over, a short explanation of the lock and building key system, and one practical tip.",
+     "limits": "Security-certificate keys are copied only with the key card. The building key can't be copied without the property manager's approval. No upselling. Care budget about €3.",
+     "touches": [
+      {
+       "id": "L1",
+       "touch": "Give the crew lead one key for the day. Hand the other keys and the key card to the tenant personally, or leave them in a sealed envelope addressed to her. This is the standard handover, explained in one sentence.",
+       "signals": [
+        "S2"
+       ],
+       "cost_eur": 0,
+       "visibility": "subtle"
+      },
+      {
+       "id": "L2",
+       "touch": "Put different coloured caps on the new flat-door keys and the building key. Tag the building key 'Haustür · Hof · Radraum', so it is clear which key opens the bike room in the courtyard.",
+       "signals": [
+        "S7"
+       ],
+       "cost_eur": 2,
+       "visibility": "silent"
+      },
+      {
+       "id": "L3",
+       "touch": "Give one practical tip, the same one every new tenant gets: keep the key card somewhere separate from the keys, and ask the property manager directly if you need a spare building key, because it can't be copied at a key shop.",
+       "signals": [
+        "S2"
+       ],
+       "cost_eur": 0,
+       "visibility": "subtle"
+      }
+     ]
+    },
+    {
+     "name": "Greengrocer stall at the Brunnenmarkt",
+     "can_change": "Advice on substitutes and how to cook them, pointing to nearby specialist shops, setting something aside or ordering it for the next market day, and packing.",
+     "limits": "Only what is on the stall that day. Closed on Sundays. Care budget about €1.",
+     "touches": [
+      {
+       "id": "G1",
+       "touch": "Only if she asks for something the stall doesn't have: suggest the closest leafy-green substitute on the stall and how to cook it, point to a nearby specialist shop, or offer to order it for the next market day. The stall does this for every customer who asks, and it never offers this unprompted.",
+       "signals": [
+        "S8"
+       ],
+       "cost_eur": 0,
+       "visibility": "subtle"
+      },
+      {
+       "id": "G2",
+       "touch": "Mention the generic market tip in passing: closed on Sundays, so Saturday is the day to stock up for Sunday cooking.",
+       "signals": [
+        "S8"
+       ],
+       "cost_eur": 0,
+       "visibility": "subtle"
+      },
+      {
+       "id": "G3",
+       "touch": "Pack heavy produce at the bottom and split the shopping into two balanced bags. Add a sprig of parsley, the usual market 'Draufgabe'.",
+       "signals": [],
+       "cost_eur": 0.5,
+       "visibility": "silent"
+      }
+     ]
+    }
+   ],
+   "rejected": [
+    {
+     "idea": "Moving crew leaves a small potted plant or a plant mister as a welcome gift.",
+     "reason": "Showy and clearly targeted: 'Why a plant?' quickly becomes 'How do you know that?'. It also stacks a third plant touch on the same flat, alongside M1 and I2."
+    },
+    {
+     "idea": "Crew lead says 'we heard you're driving your plants yourself, we left space for them'.",
+     "reason": "This refers to her Instagram reel (S6) without opt-in. It shows someone watched her content, so it fails the 'How do you know that?' test."
+    },
+    {
+     "idea": "Internet technician suggests a smart plug or timer for grow lights, or a Wi-Fi extender for the plant corner.",
+     "reason": "Device-specific suggestions aren't allowed unless she asks. The grow-light need comes only from the pseudonymous Reddit account (S11), which is discarded as de-anonymization."
+    },
+    {
+     "idea": "Locksmith recommends extra security (a second lock, a door chain, safety tips for living alone in Ottakring).",
+     "reason": "It is based on discarded S12 (pseudonymous Reddit, personal safety, gender) and S13 (a deleted post about a burglary). It is also upselling. It would feel deeply invasive."
+    },
+    {
+     "idea": "Greengrocer offers kontomire, cocoyam leaves or other West African ingredients without being asked, or points her to an African shop.",
+     "reason": "This targets ethnic or national origin (S8 specifics, discarded S9). It would feel like profiling. Specific ingredients are allowed only if she asks for them herself."
+    },
+    {
+     "idea": "A 'congratulations on your new job / your Rot-Weiß-Rot Card' note in the flat.",
+     "reason": "It uses the exact job timeline (S2) and immigration status (S3, sensitive, discarded). Explicit and creepy."
+    },
+    {
+     "idea": "Timing the visits around her start date or her move out of the serviced apartment, e.g. 'since you're back at work Monday...'.",
+     "reason": "S2 allows only the general fact that she is new in Vienna. The exact dates and housing timeline reveal her living situation."
+    },
+    {
+     "idea": "Mentioning the fiddle-leaf fig 'Kofi' or her Monstera 'firstborn', or anything about the choir or Christmas services.",
+     "reason": "Plant names and the 'firstborn' joke must never be used (S4, S5). The choir information is someone else's data and reveals her religion (S10, discarded)."
+    },
+    {
+     "idea": "Crew carries the omafiets up and parks it in the hallway outside her flat.",
+     "reason": "This breaks the house rules (no bikes in the stairwell or hallways). The right touch is pointing to the courtyard bike room (M4, L2)."
+    }
+   ]
+  }
+ },
+ {
+  "id": "05-budapest-wednesday",
+  "title": "Margit, 72 · a Wednesday in Budapest",
+  "note": "Fictional persona. Raw output of seendo.py. Library, pharmacy, new hairdresser, thermal bath.",
+  "profile": "# Public profile notes: Margit (fictional persona for the demo)\n\nMargit Horváth, 72, Budapest (Óbuda). Collected from public profiles on 20 Oct 2026. Contact details removed.\n\n## Facebook (most of her posts are set to Public)\n- Retired primary-school music teacher: taught singing with the Kodály method for 38 years in Zugló. Old class photos with a tuning fork in hand.\n- Every Saturday: a photo of the finished crossword in \"Füles\" magazine, caption \"done before the coffee got cold ☕\".\n- Shares old Budapest photos from Fortepan (the public photo archive), mostly trams, with comments like \"I rode the 6 tram to school every day in 1964\".\n- Balcony full of red geraniums (muskátli), posted every spring and autumn.\n- Photo at the Lukács Bath sitting on the steps of the thermal pool. Her comment under it: \"Of course I swim 100 lengths every morning 😂\".\n- Member of the public group \"Cukorbetegek Klubja\" (a diabetes support club); posts sugar-free cake recipes there.\n- Shared a political party's campaign post before the April 2026 election.\n- Post on 19 Oct 2026 with a photo of a man in his seventies: \"One year without you, László.\"\n- A former pupil, Ágnes, commented under the 1979 class photo: \"Margit néni, I still see you watering your geraniums every time I walk down Kórház utca!\"\n- Owner-only: phone, e-mail, address, birthday.\n\n## Facebook group \"Óbudai szomszédok\" (public, 9k members)\n- Another member posted a screenshot of a post by Margit (audience: Friends) in which she complains about her previous hairdresser by name.\n\n## Moly.hu (Hungarian book community, public reading shelf)\n- Read: Szabó Magda, \"Az ajtó\" (5 stars); Krúdy Gyula short stories (4 stars).\n- Currently reading: Szerb Antal, \"Utas és holdvilág\".\n- Her own review: \"Wonderful book, but the letters are so small I read it with a magnifier.\"\n\n## YouTube (public comments)\n- Comments on Liszt Academy (Zeneakadémia) concert streams, especially Kodály choral works: \"My pupils sang this in 1979.\"\n\n## Instagram @margit.horvath (public)\n- Knitting projects (shawls, baby blankets), a Hungarian vizsla called Bogyó, lavender fields.\n- The same name, but a different face, and every location tag is in Debrecen.\n",
+  "journey": "# Journey: a Wednesday in Budapest, 21 Oct 2026 (no travel)\n\nMargit's old hairdresser has retired, so today she tries a new one. Before that she renews her card at the central library, picks up a prescription, and ends the day at the Lukács Bath, as she does most Wednesdays. She gets around by tram and bus. Friday 23 Oct is a national holiday in Hungary, so most shops and pharmacies are closed.\n\n## Metropolitan Ervin Szabó Library, central branch (Wenckheim Palace, Kálvin tér)\n- Can change: which librarian helps her, a short tour suggestion, book recommendations, pointing to the large-print and audiobook shelves, a seat in a reading room, a referral to the library's local-history collection (Budapest Collection) and how to request material there.\n- Limits: card fees and rules fixed; staff can't hold books outside the normal reservation system; care budget ~€1.\n\n## Pharmacy (patika) near her tram stop in Óbuda\n- Can change: the pharmacist's time and explanation, a chair while she waits, how the dosage label is written (size, wording), a note on the bag about holiday opening hours and the nearest on-duty (ügyeletes) pharmacy, a reminder of when the prescription runs out.\n- Limits: medicines and prices fixed by law; advice may be based only on the prescription and what she says at the counter; strict confidentiality; care budget ~€2.\n\n## New hairdresser (fodrász) on Bécsi út, first visit\n- Can change: appointment time, which stylist, coffee or tea, what plays on the salon radio, what's on the table to read, the chat, a small finishing touch.\n- Limits: price list fixed; at most one personalised ambient touch per visit (music, reading or drink, not all three); care budget ~€2.\n\n## Lukács Bath (thermal bath)\n- Can change: cabin or locker choice, which pool staff suggest she starts in, a tip on quieter times, a towel or bathrobe arrangement, a short tip about the bath's own history or its drinking hall.\n- Limits: public bath; ticket price set by the bath's price list; care budget ~€1.\n",
+  "signals": {
+   "persona": "Margit is a 72-year-old retired Kodály music teacher from Óbuda who loves choral music, Hungarian classic literature, her Saturday crossword with coffee, her red geraniums and old Budapest trams.",
+   "signals": [
+    {
+     "id": "S1",
+     "signal": "Retired primary-school music teacher who taught singing with the Kodály method for 38 years",
+     "source": "Facebook (public posts, old class photos with a tuning fork)",
+     "confidence": "high",
+     "usable": "yes",
+     "note": "She shares this herself in public posts, and it is a big part of who she is. It is about her career, not a sensitive category."
+    },
+    {
+     "id": "S2",
+     "signal": "Does the Füles crossword every Saturday, ideally with a coffee",
+     "source": "Facebook (public weekly photo, caption \"done before the coffee got cold\")",
+     "confidence": "high",
+     "usable": "yes",
+     "note": "She posts it publicly every week, and it is harmless. A guess based on it could not make her feel watched."
+    },
+    {
+     "id": "S3",
+     "signal": "Loves old Budapest photos, especially trams, and rode the 6 tram as a child",
+     "source": "Facebook (public shares of Fortepan photos, with her own comments)",
+     "confidence": "high",
+     "usable": "yes",
+     "note": "She shares and comments on these publicly and often. The interest is generic, so a guess would not reveal how we know."
+    },
+    {
+     "id": "S4",
+     "signal": "Grows red geraniums (muskátli) on her balcony",
+     "source": "Facebook (her own public posts every spring and autumn)",
+     "confidence": "high",
+     "usable": "yes",
+     "note": "Her own public posts, posted every season. Use the hobby only. Do not use where the balcony is (see S9)."
+    },
+    {
+     "id": "S5",
+     "signal": "Visits the Lukács Bath",
+     "source": "Facebook (public photo on the thermal pool steps)",
+     "confidence": "medium",
+     "usable": "conditional",
+     "note": "Use only that she visits the Lukács Bath. \"I swim 100 lengths every morning 😂\" is a joke, not a fact, so it must not be read as a swimming habit or a daily routine. Based on one photo."
+    },
+    {
+     "id": "S6",
+     "signal": "Hungarian classic literature: Szabó Magda (Az ajtó, 5 stars), Krúdy (4 stars), currently reading Szerb Antal, Utas és holdvilág",
+     "source": "Moly.hu (public reading shelf and ratings)",
+     "confidence": "high",
+     "usable": "yes",
+     "note": "Her public shelf, which she keeps on purpose. Use it only as a general literary taste. Do not point to the exact book she is reading now, because that could feel like being tracked."
+    },
+    {
+     "id": "S7",
+     "signal": "Small print is hard for her to read; she uses a magnifier",
+     "source": "Moly.hu (her own public review)",
+     "confidence": "high",
+     "usable": "conditional",
+     "note": "This touches on eyesight, which is close to health data. It is usable only as a general accessibility default offered to everyone (for example a large-print menu available on request). Never target it at her and never mention it."
+    },
+    {
+     "id": "S8",
+     "signal": "Follows Kodály choral works and Liszt Academy concert streams",
+     "source": "YouTube (public comments, e.g. \"My pupils sang this in 1979\")",
+     "confidence": "medium",
+     "usable": "yes",
+     "note": "The comments fit her teaching history, so the account is very likely hers, but the link between platforms is inferred, so confidence is medium. The interest itself is public and harmless."
+    },
+    {
+     "id": "S9",
+     "signal": "Location of her geranium balcony (a named street)",
+     "source": "Facebook (comment by former pupil Ágnes under the 1979 class photo)",
+     "confidence": "medium",
+     "usable": "no",
+     "note": "Someone else's comment, and it reveals her home location. Address data is discarded."
+    },
+    {
+     "id": "S10",
+     "signal": "Member of a diabetes support club; posts sugar-free cake recipes",
+     "source": "Facebook (public group \"Cukorbetegek Klubja\")",
+     "confidence": "high",
+     "usable": "no",
+     "note": "Health is a sensitive category. Acting on it, even with a sugar-free gesture, would fail the \"How do you know that?\" test."
+    },
+    {
+     "id": "S11",
+     "signal": "Shared a political party's campaign post",
+     "source": "Facebook (public share before the April 2026 election)",
+     "confidence": "high",
+     "usable": "no",
+     "note": "Political opinion is a sensitive category. Never use it."
+    },
+    {
+     "id": "S12",
+     "signal": "Widowed: \"One year without you, László\"",
+     "source": "Facebook (public post, 19 Oct 2026)",
+     "confidence": "high",
+     "usable": "no",
+     "note": "Grief and bereavement are deeply personal, and the post names another person. Any touch tied to it, especially near the anniversary, would feel intrusive."
+    },
+    {
+     "id": "S13",
+     "signal": "Complained about her previous hairdresser by name",
+     "source": "Facebook group \"Óbudai szomszédok\" (another member's screenshot of her Friends-only post)",
+     "confidence": "medium",
+     "usable": "no",
+     "note": "She did not make it public: she shared it with Friends only and someone else reposted it. It also names a third party."
+    },
+    {
+     "id": "S14",
+     "signal": "Knitting, a vizsla named Bogyó, lavender fields",
+     "source": "Instagram @margit.horvath",
+     "confidence": "low",
+     "usable": "no",
+     "note": "Probably a namesake: the face is different and every location tag is in Debrecen. This is not about this person."
+    },
+    {
+     "id": "S15",
+     "signal": "Phone, e-mail, address, birthday",
+     "source": "Facebook (owner-only fields)",
+     "confidence": "high",
+     "usable": "no",
+     "note": "These fields are owner-only and are contact or personal data. Discarded."
+    }
+   ]
+  },
+  "care": {
+   "businesses": [
+    {
+     "name": "Metropolitan Ervin Szabó Library, central branch (Wenckheim Palace)",
+     "can_change": "Which librarian helps her, a short tour suggestion, book recommendations, pointing to the large-print and audiobook shelves, a reading-room seat, a referral to the Budapest Collection and how to request material there.",
+     "limits": "Card fees and rules are fixed. No holds outside the normal reservation system. Care budget about €1. To avoid stacking, use at most one interest-based touch (old Budapest). Her literary taste comes into play only if she asks for a recommendation.",
+     "touches": [
+      {
+       "id": "L1",
+       "touch": "During the card renewal, the librarian gives the short welcome-back tour line that every renewing reader hears. It mentions the palace's historic reading rooms and the Budapest Collection, which holds old city photographs, maps and transport material, and it shows how to request items there. Nothing is said about trams or photo sharing.",
+       "signals": [
+        "S3"
+       ],
+       "cost_eur": 0,
+       "visibility": "subtle"
+      },
+      {
+       "id": "L2",
+       "touch": "If she asks for something to read, the librarian on duty who knows 20th-century Hungarian classics helps her. They suggest a Krúdy or Szabó Magda contemporary from the open shelves, in a large-print edition if one exists. They never name or ask about the book she is reading now.",
+       "signals": [
+        "S6"
+       ],
+       "cost_eur": 0,
+       "visibility": "subtle"
+      },
+      {
+       "id": "L3",
+       "touch": "Every renewing reader gets the same printed renewal slip. It is set in clear 14pt type and mentions the large-print and audiobook shelves as a general service. It is never pointed out to her in particular.",
+       "signals": [
+        "S7"
+       ],
+       "cost_eur": 0.1,
+       "visibility": "silent"
+      },
+      {
+       "id": "L4",
+       "touch": "If she wants to sit down, staff offer the free reading-room seat with the best daylight and a desk lamp, as they would for anyone.",
+       "signals": [],
+       "cost_eur": 0,
+       "visibility": "silent"
+      }
+     ]
+    },
+    {
+     "name": "Pharmacy (patika) near her tram stop in Óbuda",
+     "can_change": "The pharmacist's time and explanation, a chair while she waits, the size and wording of the dosage label, a bag note on holiday hours and the on-duty pharmacy, a reminder of when the prescription runs out.",
+     "limits": "Medicines and prices are fixed by law. Advice comes only from the prescription and what she says at the counter. No social-media signal is used here at all, because strict confidentiality applies. Care budget about €2.",
+     "touches": [
+      {
+       "id": "P1",
+       "touch": "This week every customer's bag gets a small printed note. It says the pharmacy is closed on Friday 23 Oct (national holiday) and gives the address and hours of the nearest on-duty (ügyeletes) pharmacy.",
+       "signals": [],
+       "cost_eur": 0.1,
+       "visibility": "silent"
+      },
+      {
+       "id": "P2",
+       "touch": "The dosage label is printed in large, plain wording, such as \"1 tablet in the morning, with breakfast\". This is the pharmacy's default for every customer and is not adjusted for her.",
+       "signals": [
+        "S7"
+       ],
+       "cost_eur": 0,
+       "visibility": "silent"
+      },
+      {
+       "id": "P3",
+       "touch": "The pharmacist writes the date the prescription runs out on the label. The date is worked out only from the prescription itself, so she can plan around the long weekend.",
+       "signals": [],
+       "cost_eur": 0,
+       "visibility": "silent"
+      },
+      {
+       "id": "P4",
+       "touch": "The chair by the counter is offered to anyone with a wait longer than a minute. The pharmacist takes an unhurried moment to explain the dosage and asks, \"Any questions about how to take it?\"",
+       "signals": [],
+       "cost_eur": 0,
+       "visibility": "silent"
+      }
+     ]
+    },
+    {
+     "name": "New hairdresser (fodrász) on Bécsi út, first visit",
+     "can_change": "Appointment time, which stylist, coffee or tea, the salon radio, what is on the table to read, the chat, a small finishing touch.",
+     "limits": "The price list is fixed. Only ONE personalised ambient touch is allowed, and here it is the reading table (H1). Radio and drink stay at the house default. Care budget about €2.",
+     "touches": [
+      {
+       "id": "H1",
+       "touch": "This week's Füles and a pencil lie on the waiting and styling table among the usual magazines. Many Hungarian salons do this, so it reads as normal salon reading. Nobody points it out.",
+       "signals": [
+        "S2"
+       ],
+       "cost_eur": 1.5,
+       "visibility": "silent"
+      },
+      {
+       "id": "H2",
+       "touch": "On booking, she is offered a calm mid-morning weekday slot with the stylist best at first-time consultations. That stylist starts by asking what she liked and disliked before and lets her describe what she wants. Her previous hairdresser is never mentioned.",
+       "signals": [],
+       "cost_eur": 0,
+       "visibility": "silent"
+      },
+      {
+       "id": "H3",
+       "touch": "The house coffee or tea is offered as soon as she sits down, as it is for every guest. Radio and drink are not personalised, so the H1 ambient touch stays the only one.",
+       "signals": [],
+       "cost_eur": 0.5,
+       "visibility": "silent"
+      },
+      {
+       "id": "H4",
+       "touch": "Chat rule: the stylist follows her lead. If she brings up teaching or singing herself, the stylist responds with genuine interest. The stylist never opens with topics she hasn't raised.",
+       "signals": [
+        "S1"
+       ],
+       "cost_eur": 0,
+       "visibility": "subtle"
+      },
+      {
+       "id": "H5",
+       "touch": "Finishing touch: a hand mirror to see the back, and a short aftercare card printed in large type. Every client gets the same card.",
+       "signals": [
+        "S7"
+       ],
+       "cost_eur": 0.2,
+       "visibility": "silent"
+      }
+     ]
+    },
+    {
+     "name": "Lukács Bath (thermal bath)",
+     "can_change": "Cabin or locker choice, which pool staff suggest starting in, a tip on quieter times, towel or bathrobe arrangement, a short tip about the bath's history or drinking hall.",
+     "limits": "This is a public bath and the ticket price is fixed. Care budget about €1. Only the fact that she visits is used. No swimming habit or routine is assumed.",
+     "touches": [
+      {
+       "id": "B1",
+       "touch": "At the counter, staff give the same short history tip any guest might hear on a quiet evening: look at the gratitude plaques in the courtyard and the drinking hall (ivócsarnok).",
+       "signals": [
+        "S5"
+       ],
+       "cost_eur": 0,
+       "visibility": "subtle"
+      },
+      {
+       "id": "B2",
+       "touch": "Staff mention that the Friday 23 Oct holiday may bring crowds and say which weekday hours are usually quietest. This general tip goes to all regulars this week.",
+       "signals": [
+        "S5"
+       ],
+       "cost_eur": 0,
+       "visibility": "subtle"
+      },
+      {
+       "id": "B3",
+       "touch": "If any are free, staff assign a well-lit cabin close to the thermal pools and leave a towel folded ready. This is the standard choice when the bath is not busy.",
+       "signals": [],
+       "cost_eur": 0.5,
+       "visibility": "silent"
+      }
+     ]
+    }
+   ],
+   "rejected": [
+    {
+     "idea": "Hairdresser puts Kodály choral music on the radio, lays out Füles and an old-Budapest tram photo book, and serves her coffee \"just how she likes it\".",
+     "reason": "This breaks the one-ambient-touch limit. Stacking her music, crossword, tram and coffee interests in one place adds up to a profile, and she would ask \"How do you know all that?\""
+    },
+    {
+     "idea": "Offer a sugar-free pastry with the coffee at the salon, or have the pharmacist mention diabetes products.",
+     "reason": "This is based on S10 (diabetes club), which is health data in a sensitive category. The pharmacist may use only the prescription and what she says at the counter."
+    },
+    {
+     "idea": "Any extra warmth, condolence or gesture linked to her late husband László, given that the anniversary was two days earlier.",
+     "reason": "S12 concerns bereavement and names another person. Any touch connected to it would feel deeply intrusive."
+    },
+    {
+     "idea": "Bath staff suggest the lap-swimming pool or an early-morning slot \"for your 100 lengths\".",
+     "reason": "\"I swim 100 lengths every morning 😂\" is a joke, not a fact. Acting on it is both wrong and creepy."
+    },
+    {
+     "idea": "Librarian asks \"How are you finding Utas és holdvilág?\" or puts the next Szerb Antal book aside for her.",
+     "reason": "Referring to the exact book she is reading now feels like tracking. Holding books outside the reservation system also breaks library rules."
+    },
+    {
+     "idea": "Salon says \"don't worry, we're not like your last hairdresser\".",
+     "reason": "S13 was a Friends-only post that someone else reposted, and it names a third party. It is not public, so it must not be used."
+    },
+    {
+     "idea": "Hand her a pot of red geraniums, or offer to deliver something to her balcony.",
+     "reason": "This is showy, it changes the product, and delivery would need her home location (S9), which is discarded address data."
+    },
+    {
+     "idea": "Give a large-print label or menu to her alone because she uses a magnifier.",
+     "reason": "Eyesight is close to health data (S7). It can be used only as a default for everyone, never targeted at her or mentioned."
+    },
+    {
+     "idea": "Librarian or stylist says \"we loved your Fortepan tram photos\" or \"we saw your pupils sang this in 1979\".",
+     "reason": "This is an explicit mention without opt-in. It fails the \"How do you know that?\" test immediately."
+    },
+    {
+     "idea": "Small talk about the 23 October holiday or the recent election.",
+     "reason": "Politics is a sensitive category (S11). Staff should mention the holiday only as practical information about opening hours."
+    },
+    {
+     "idea": "Stylist chats about knitting, a vizsla or the lavender fields.",
+     "reason": "S14 is probably a namesake in Debrecen, so it is not about this person."
+    }
+   ]
+  }
  }
 ];

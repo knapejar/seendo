@@ -18,9 +18,11 @@ RULES = """Hard rules (never break):
 - Use ONLY information the person made public. Anything marked owner-only/private, contact details,
   birthdays, home address, and relationships inferred from other people's accounts are DISCARDED.
 - The product stays the same; only attention changes. Every touch costs at most a few euros.
-- Most touches should be silent (the guest never notices it was targeted). If a guess is wrong, nothing bad happens.
+- Most touches should be silent (the customer never notices it was targeted). If a guess is wrong, nothing bad happens.
 - Explicit mentions ("we saw your post") only with opt-in.
-- The "How do you know that?" test: if the guest could feel watched, reject the touch."""
+- The "How do you know that?" test: if the customer could feel watched, reject the touch.
+- Several touches that are each harmless can add up to a profile when they land at one place; avoid stacking.
+- Make sure every signal is about THIS person (namesakes, other people's accounts) and is meant seriously (jokes are not facts)."""
 
 
 def claude(prompt: str) -> dict:
@@ -36,7 +38,8 @@ def social_signals(profile: str) -> dict:
     return claude(f"""You are the Social Signals step of SEENDO.
 From the public profile notes below, extract signals (interests, passions, creative pursuits, habits).
 For each: what it is, the public source, confidence (high/medium/low) and usable: "yes", "conditional"
-(say the condition) or "no" (say why, e.g. owner-only, inferred relationship, contact detail).
+(say the condition) or "no" (say why, e.g. owner-only, inferred relationship, contact detail, sensitive category,
+someone else's data). The note explains the verdict only; do NOT suggest gestures or businesses here, that is a later step.
 Also write a one-sentence persona.
 {RULES}
 Reply with JSON only:

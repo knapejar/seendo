@@ -11,7 +11,7 @@ SEENDO is an agent that reads only what a customer has made **public**, matches 
 
 **▶ Demo video (60 s): https://youtu.be/_OBFE8PEDPI**
 
-**▶ Live demo: https://knapejar.github.io/seendo/** (mock: replays the recorded runs of all three examples step by step, no LLM calls, works instantly)
+**▶ Live demo: https://knapejar.github.io/seendo/** (mock: replays the recorded runs of all five examples step by step, no LLM calls, works instantly)
 
 Agents 0.0.7 · From Dusk Till Dawn Hackathon #01 · topic **Social Media Deep Research** (research goal: hospitality; a person and a journey go in, a report with traceable sources comes out).
 
@@ -48,15 +48,17 @@ flowchart TD
 4. Explicit mentions ("we saw your post") only with opt-in.
 5. Every touch has a trail: signal → source → cost → visibility.
 
-## Three end-to-end examples
+## Five end-to-end examples
 
 | # | Person | Journey | Highlights | Full output |
 |---|---|---|---|---|
 | 1 | **Jarda** (real, a team member, his own public profiles): developer, mountain lover, cipher-game fan | Train Prague → Kraków, hotel, tour, lunch | coffee with a cipher whose answer is a local tip · handwritten note "sunrise at Kościuszko Mound, you can see the Tatras" · the Wawel dragon told as *Kraków's first hack* · a free taste of oscypek from the same mountains · ❌ German shepherd bedsheets | [examples/01-krakow](examples/01-krakow/output.md) |
 | 2 | **Marta** (fictional): paediatric nurse, runner, film photographer, learning Portuguese | Flight Prague → Lisbon, guesthouse, surf lesson, café | morning-light window seat · map of an early riverside running loop · sunrise viewpoints on the welcome card · barista answers kindly in Portuguese only if she starts in Portuguese · ❌ a roll of Portra 400 film in the room, ❌ "congrats on your half marathon", ❌ anything built on an inferred breakup | [examples/02-lisbon](examples/02-lisbon/output.md) |
 | 3 | **Tomáš** (fictional): new dad, board-game designer, balcony birdwatcher | A Saturday of errands in Brno: car service, optician, bakery | window seat by a bird feeder in the car-service waiting room · bird-print lens cloth · weekly logic riddle in the bakery bag · ❌ hedgehog-shaped roll (points straight at his game), ❌ baby congratulations from a social post, ❌ anything about his wife's health | [examples/03-errands](examples/03-errands/output.md) |
+| 4 | **Ama** (fictional): timber structural engineer from Rotterdam, 43 houseplants, Dutch city bike | Moving into a 4th-floor walk-up in Vienna: movers, fibre technician, locksmith, Brunnenmarkt stall | crew keeps the window walls free and the heated flat closed before her plants arrive · first-week checklist with the 3-day Meldezettel deadline ticked · bike goes straight to the courtyard bike room (house rule) · ❌ "congrats on the new job", ❌ fear-selling security after a deleted burglary post, ❌ plant touches stacked at every stop | [examples/04-vienna-move](examples/04-vienna-move/output.md) |
+| 5 | **Margit, 72** (fictional): widowed retired music teacher, crossword solver, old-tram nostalgia | A Wednesday in Budapest: library, pharmacy, a new hairdresser, Lukács Bath | pharmacy note for everyone: Friday 23 Oct is a holiday, here is the on-duty pharmacy · prescription end date on the label · one Füles crossword at the salon, and only one personal touch · ❌ condolences two days after the anniversary, ❌ sugar-free pastry from her diabetes-group posts, ❌ knitting small talk (that's a namesake in Debrecen) | [examples/05-budapest-wednesday](examples/05-budapest-wednesday/output.md) |
 
-Example 3 shows the same pipeline works outside travel: any service with a human touchpoint.
+Examples 3–5 show the same pipeline works outside travel: any service with a human touchpoint. Cases 4 and 5 were designed to be hard: their profiles hide unlabelled traps (immigration and religion data, a deleted post kept by the Wayback Machine, a pseudonymous Reddit account linked only by a photo, a namesake's Instagram, a friends-only post screenshotted into a public group, grief, health, jokes that look like facts). A creator agent wrote them and a critic agent reviewed them over three rounds against copying cases 1–3, factual errors and missed traps.
 
 ### Example 1 at a glance (the demo video)
 
@@ -84,9 +86,9 @@ All logic is in [`seendo.py`](seendo.py) (~120 lines): two Claude calls (Social 
 
 | | |
 |---|---|
-| ✅ **Real** | The pipeline in `seendo.py` runs end to end on Claude Code. Examples 2 and 3 are its unedited output. Example 1 was produced with Claude Code following the same steps and prompts during the night; the video is built on it. Example 1's profile is real public data of a team member, collected with his consent, with contacts removed. |
-| 🟡 **Simulated** | The live demo page is a mock: it replays recorded outputs from `examples/` and makes no LLM calls. Profile collection: public profiles were read and summarised into `profile.md` by hand / with a browser agent, not by a scraper in this repo. Business capabilities are written by hand. Personas in examples 2 and 3 are fictional. |
-| ❌ **Missing** | Automated scraping (e.g. Apify actors for Instagram/LinkedIn) · a business-side approval UI · the guest opt-in flow for explicit touches · delivery integrations (POS, hotel PMS) · evaluation on more than three cases. |
+| ✅ **Real** | The pipeline in `seendo.py` runs end to end on Claude Code. Examples 2–5 are its unedited output (2–3 from the first prompt version; the critic loop then fixed a Step-1 prompt bias before 4–5). Example 1 was produced with Claude Code following the same steps and prompts during the night; the video is built on it. Example 1's profile is real public data of a team member, collected with his consent, with contacts removed. |
+| 🟡 **Simulated** | The live demo page is a mock: it replays recorded outputs from `examples/` and makes no LLM calls. Profile collection: public profiles were read and summarised into `profile.md` by hand / with a browser agent, not by a scraper in this repo. Business capabilities are written by hand. Personas in examples 2–5 are fictional. |
+| ❌ **Missing** | Automated scraping (e.g. Apify actors for Instagram/LinkedIn) · a business-side approval UI · the guest opt-in flow for explicit touches · delivery integrations (POS, hotel PMS) · evaluation on more than five cases. |
 
 The guardrail is an LLM judgement, not a guarantee: a human at the business approves every gesture before it reaches the guest. That is a deliberate part of the design.
 

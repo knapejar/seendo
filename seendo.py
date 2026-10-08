@@ -86,7 +86,7 @@ def render(name: str, sig: dict, care: dict) -> str:
                for t in b["touches"]]
         md.append("")
     md += ["## Rejected by the guardrail (\"How do you know that?\")\n"]
-    md += [f"- ❌ {r['idea']}: {r['reason']}" for r in care["rejected"]]
+    md += [f"- ❌ {r['idea'].rstrip('.')}: {r['reason']}" for r in care["rejected"]]
     return "\n".join(md) + "\n"
 
 
